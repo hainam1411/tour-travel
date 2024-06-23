@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: layout">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang chủ</title>
 </head>
 <body>
+<h1>Trang chủ</h1>
 
+
+<a href="/types">Danh sách loại tour</a>
+<form th:action="@{/tours/search}">
+    <input type="text" name="s">
+    <button>Tìm kiếm</button>
+</form>
+<h2>Danh sách tour</h2>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Mã tour</th>
+        <th>Điểm đến</th>
+        <th>Giá</th>
+        <th>Loại tour</th>
+        <th colspan="2">Hành động</th>
+    </tr>
+    <tr th:each="tour , count : ${tours}">
+        <td th:text="${count.count}"></td>
+        <td th:text="${tour.code}"></td>
+        <td th:text="${tour.name}"></td>
+        <td th:text="${tour.price}"></td>
+        <td th:text="${tour.type.getName()}"></td>
+        <td><button><a th:href="@{/tours/update/{id}(id=${tour.id})}">Sửa</a></button></td>
+        <td><button><a th:href="@{/tours/delete/{id}(id=${tour.id})}">Xóa</a></button></td>
+    </tr>
+    <tr>
+        <td colspan="6"></td>
+        <td colspan="2" style="text-align: center"><button><a th:href="@{/tours/create}">Them tour moi</a></button></td>
+    </tr>
+</table>
+<div>
+    <a th:if="${tours.hasPrevious()}" th:href="@{/tours(page=${tours.number - 1})}">Previous</a>
+    <span th:text="${tours.number+1}"></span>/<span th:text="${tours.totalPages}"></span>
+    <a th:if="${tours.hasNext()}" th:href="@{/tours(page=${tours.number + 1})}">Next</a>
+</div>
 </body>
 </html>

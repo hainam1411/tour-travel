@@ -6,6 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
 @Entity
+@Table(name = "tour")
 public class Tour {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +16,7 @@ public class Tour {
     @Pattern(regexp = "^[A-Z]{2}\\\\d{3}$", message = "hay viet dung dịnh dạng XX(A-Z)-xxx(0-9)!")
     private String code;
     @NotEmpty(message = "Tên không được để trống!")
-    private String destination;
+    private String name;
     @Min(value = 1000000 , message = "Giá thấp nhất phải trên 1000000")
     private double price;
     @ManyToOne
@@ -25,10 +26,10 @@ public class Tour {
     public Tour() {
     }
 
-    public Tour(Long id, String code, String destination, double price, Type type) {
+    public Tour(Long id, String code, String name, double price, Type type) {
         this.id = id;
         this.code = code;
-        this.destination = destination;
+        this.name = name;
         this.price = price;
         this.type = type;
     }
@@ -49,12 +50,12 @@ public class Tour {
         this.code = code;
     }
 
-    public String getDestination() {
-        return destination;
+    public String getName() {
+        return name;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {

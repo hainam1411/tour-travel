@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xoa</title>
 </head>
 <body>
-
+<h1>Xoa tour</h1>
+<form action="" method="post" th:object="${tour}">
+    <h4>ID</h4>
+    <p th:text="*{id}"></p>
+    <h4>Ma tour</h4>
+    <p th:text="*{code}"></p>
+    <h4>Diem den</h4>
+    <p th:text="*{name}"></p>
+    <h4>Gia</h4>
+    <p th:text="*{price}"></p>
+    <h4>Loai tour</h4>
+    <p th:text="*{type.name}"></p>
+    <button>Xac nhan</button>
+</form>
+<button><a href="/tours/">Home</a></button>
 </body>
 </html>

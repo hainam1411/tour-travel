@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thay đổi thông tin xe</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+<h1>Thay đổi thông tin xe</h1>
+<form action="" method="post" th:object="${tour}">
 
+    <h3>Id</h3>
+    <input type="text" th:field="*{id}" readonly>
+    <br>
+    <h3>Ma tour</h3>
+    <input type="text" th:field="*{code}">
+    <span th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></span>
+    <br>
+    <h3>Diem den</h3>
+    <input type="text" th:field="*{name}">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    <br>
+
+    <h3>Gia</h3>
+    <input type="text" th:field="*{price}">
+    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+    <br>
+    <h3>Loai tour</h3>
+    <select th:field="*{type.id}">
+        <option th:each="type : ${types}"
+                th:value="${type.id}"
+                th:text="${type.name}">
+        </option>
+    </select>
+    <br>
+    <button>Sua</button>
+</form>
+<button><a href="/tours/">Trang chủ</a></button>
 </body>
 </html>

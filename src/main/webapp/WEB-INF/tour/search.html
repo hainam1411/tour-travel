@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tim kiem</title>
 </head>
 <body>
-
+<h2>Danh sach tour</h2>
+<table >
+    <tr>
+        <th>STT</th>
+        <th>Ma tour</th>
+        <th>Diem den</th>
+        <th>Gia</th>
+        <th>Loai tour</th>
+        <th colspan="2"></th>
+    </tr>
+    <tr th:each="tour , count : ${tours}">
+        <td th:text="${count.count}"></td>
+        <td th:text="${tour.code}"></td>
+        <td th:text="${tour.name}"></td>
+        <td th:text="${tour.price}"></td>
+        <td th:text="${tour.type.getName()}"></td>
+        <td><button><a th:href="@{/tours/update/{id}(id=${tour.id})}">Sua</a></button></td>
+        <td><button><a th:href="@{/tours/delete/{id}(id=${tour.id})}">Xoa</a></button></td>
+    </tr>
+</table>
+<div>
+    <a th:if="${tours.hasPrevious()}" th:href="@{/tours/search(s=${s},page=${tours.number - 1})}">Previous</a>
+    <span th:text="${tours.number+1}"></span>/<span th:text="${tours.totalPages}"></span>
+    <a th:if="${tours.hasNext()}" th:href="@{/tours/search(s=${s},page=${tours.number + 1})}">Next</a>
+</div>
+<button><a href="/cars">Home</a></button>
 </body>
 </html>
