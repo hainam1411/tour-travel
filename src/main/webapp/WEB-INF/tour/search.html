@@ -33,6 +33,6 @@
     <span th:text="${tours.number+1}"></span>/<span th:text="${tours.totalPages}"></span>
     <a th:if="${tours.hasNext()}" th:href="@{/tours/search(s=${s},page=${tours.number + 1})}">Next</a>
 </div>
-<button><a href="/cars">Home</a></button>
+<button><a href="/tours/">Trang chu</a></button>
 </body>
 </html>

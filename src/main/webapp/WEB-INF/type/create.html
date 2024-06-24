@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Them</title>
 </head>
 <body>
-
+<h1>Thêm Loai tour</h1>
+<form action="" method="post" th:object="${type}">
+    <h3>Loai tour</h3>
+    <input type="text" th:field="*{name}" placeholder="Loai tour">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    <button>Thêm</button>
+</form>
+<button><a href="/types">Trang chu</a></button>
 </body>
 </html>

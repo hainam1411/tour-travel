@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Xoa</title>
+
 </head>
 <body>
-
+<h1>Xoa tour</h1>
+<form action="" method="post" th:object="${type}">
+    <h4>ID</h4>
+    <p th:text="*{id}"></p>
+    <h4>Loai tour</h4>
+    <p th:text="*{name}"></p>
+    <button>Xoa</button>
+</form>
+<button><a href="/types">Danh sach tour</a></button>
 </body>
 </html>

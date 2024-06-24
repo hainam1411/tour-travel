@@ -1,8 +1,7 @@
 package org.example.tourtravel.controller;
 
 import org.example.tourtravel.model.Type;
-import org.example.tourtravel.service.Impl.TourService;
-import org.example.tourtravel.service.Impl.TypeService;
+import org.example.tourtravel.service.ITypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -16,10 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/type")
 
 public class TypeController {
-    private final TypeService typeService;
+    private final ITypeService typeService;
 
     @Autowired
-    public TypeController(TypeService typeService , TourService tourService) {
+    public TypeController(ITypeService typeService) {
         this.typeService = typeService;
     }
 
@@ -62,7 +61,7 @@ public class TypeController {
 
     @GetMapping("/update/{id}")
     public ModelAndView showFormUpdate(@PathVariable Long id) {
-        Type type = (Type) typeService.findById(id).get();
+        Type type = typeService.findById(id).get();
         ModelAndView modelAndView = new ModelAndView("type/update");
         modelAndView.addObject("type", type);
         return modelAndView;

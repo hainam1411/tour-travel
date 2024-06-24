@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Danh sach loai tour</title>
 </head>
 <body>
-
+<h2>Danh sách kiểu xe</h2>
+<a th:href="@{/cars}">Danh sach tour</a>
+<br>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Loai tour</th>
+        <th colspan="2"></th>
+    </tr>
+    <tr th:each="type , count : ${types}">
+        <td th:text="${count.count}"></td>
+        <td th:text="${type.name}"></td>
+        <td><button><a th:href="@{/types/update/{id}(id=${type.id})}">Sửa</a></button></td>
+        <td><button><a th:href="@{/types/delete/{id}(id=${type.id})}">Xóa</a></button></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td colspan="2" style="text-align: center">
+            <button><a th:href="@{/types/create}">Them loai tour</a></button>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

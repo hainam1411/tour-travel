@@ -1,23 +1,23 @@
 
 
-java:S3655,"7Call "Optional#isPresent()" before accessing the value.(ñ·×üÿÿÿÿ8é¡è±„2J$22506133-7fc4-40b3-8991-2519f8e95ef3
+java:S3655,"7Call "Optional#isPresent()" before accessing the value.(ñ·×üÿÿÿÿ8é¡è±„2J$3749896e-47d6-49e6-a6d8-abcf1aead851
 
-java:S11929"FDefine a constant instead of duplicating this literal "types" 6 times.(«ßÃ‰øÿÿÿÿ8ì¡è±„2J$7ad27a79-6d56-4341-bac2-67eb71edfd42
+java:S11929"FDefine a constant instead of duplicating this literal "types" 6 times.(«ßÃ‰øÿÿÿÿ8ì¡è±„2J$8c030ee2-dbee-4be3-94f9-859364907d95
 
-java:S11927"LDefine a constant instead of duplicating this literal "tour/create" 3 times.(”õÙı8™¤Ô±„2J$f780e95b-4b46-4eda-9566-ee412a75bc88
+java:S11927"LDefine a constant instead of duplicating this literal "tour/create" 3 times.(”õÙı8™¤Ô±„2J$36e27649-3666-4915-a3f8-022310973946
 ”
-java:S1192T"LDefine a constant instead of duplicating this literal "tour/update" 3 times.(£Ï£•ıÿÿÿÿ8ì¡è±„2J$3f2544ff-7d3d-4871-a840-410f0b99e306
+java:S1192T"LDefine a constant instead of duplicating this literal "tour/update" 3 times.(£Ï£•ıÿÿÿÿ8ì¡è±„2J$fd822c80-fedd-4fd7-9a22-58937d753b3f
 ˜
-java:S11923"PDefine a constant instead of duplicating this literal "redirect:/tours" 3 times.(‚¯Ü¨ùÿÿÿÿ8í¡è±„2J$9c15bdfc-13a1-46de-be6b-b42f16a4245d
+java:S11923"PDefine a constant instead of duplicating this literal "redirect:/tours" 3 times.(‚¯Ü¨ùÿÿÿÿ8í¡è±„2J$58e9dfc1-644c-4652-86f7-8f8b62c0ba7c
 q
-java:S6856_".Bind path variable "id" to a method parameter.(µòšä8î¡è±„2J$31a601ec-7245-4d11-9243-0f2dbd04e367
+java:S6856_".Bind path variable "id" to a method parameter.(µòšä8î¡è±„2J$89086614-fa24-401e-a6a8-153ce46d2e4c
 ˆ
-java:S4684>"@Replace this persistent entity with a simple POJO or DTO object.(±ŞÑùÿÿÿÿ8ø¡è±„2J$3118fa55-ddbf-43ec-ba24-8b1bd8e81045
+java:S4684>"@Replace this persistent entity with a simple POJO or DTO object.(±ŞÑùÿÿÿÿ8ø¡è±„2J$1dc95a18-2fcd-47c8-a039-03f1b31a620b
 ƒ
-java:S4684`"@Replace this persistent entity with a simple POJO or DTO object.(ùÂ›‡8¢è±„2J$5a934065-134f-4001-bd94-1dd2a8228de5
-‹
-java:S1128"HRemove this unused import 'org.example.tourtravel.service.ITourService'.( ¨¤€8†¢è±„2J$6fc136e5-45f4-43a0-9a61-a85e1df81c3c
-‹
-java:S1128"HRemove this unused import 'org.example.tourtravel.service.ITypeService'.(€´™ 8‡¢è±„2J$65005842-cdf7-410b-8736-41f44a1da687
+java:S4684`"@Replace this persistent entity with a simple POJO or DTO object.(ùÂ›‡8¢è±„2J$c204e4c6-78d1-4a03-a126-9206e6fbb77e
+”
+java:S1128"LRemove this unused import 'org.example.tourtravel.service.Impl.TourService'.(ÇË¯úÿÿÿÿ8ŒÈ€À„2J$39702d5e-e9bf-4b28-a3a3-c870267a1892
+”
+java:S1128"LRemove this unused import 'org.example.tourtravel.service.Impl.TypeService'.(™ßš¸ÿÿÿÿÿ8üè€À„2J$612f6364-9974-4acf-bc89-056aad78afae
 
-java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8‡¢è±„2J$38823f01-37eb-4795-8d7c-cb795488e123
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8æ€À„2J$a010f745-a502-46f7-a82d-ac65d599b528

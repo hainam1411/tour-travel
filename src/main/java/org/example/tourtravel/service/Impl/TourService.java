@@ -14,8 +14,12 @@ import java.util.Optional;
 @Service
 @Transactional
 public class TourService implements ITourService {
-    @Autowired
     private ITourRepository tourRepository;
+
+    @Autowired
+    public TourService(ITourRepository tourRepository) {
+        this.tourRepository = tourRepository;
+    }
 
 
     @Override

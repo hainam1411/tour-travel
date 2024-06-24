@@ -22,17 +22,17 @@ import java.util.Optional;
 @RequestMapping("/tours")
 public class TourController {
 
-    private final TourService tourService;
-    private final TypeService typeService;
+    private final ITourService tourService;
+    private final ITypeService typeService;
     @Autowired
-    public TourController(TourService tourService, TypeService typeService) {
+    public TourController(ITourService tourService, ITypeService typeService) {
         this.tourService = tourService;
         this.typeService = typeService;
     }
 
 
     @GetMapping("")
-    public ModelAndView showList(@PageableDefault Pageable pageable) {
+    public ModelAndView showList(@PageableDefault(value = 5) Pageable pageable) {
         ModelAndView modelAndView = new ModelAndView("tour/index");
         modelAndView.addObject("tours", tourService.findAllPageAndSort(pageable));
         return modelAndView;

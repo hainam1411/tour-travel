@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Sua</title>
 </head>
 <body>
-
+<h1>Sua loai tour</h1>
+<form action="" method="post" th:object="${type}">
+    <h3>ID</h3>
+    <input type="number" th:field="*{id}" readonly>
+    <br>
+    <h3>Loai tour</h3>
+    <input type="text" th:field="*{name}">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    <br>
+    <button>Sua</button>
+</form>
+<button><a href="/types">Trang chu</a></button>
 </body>
 </html>
