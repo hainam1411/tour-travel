@@ -13,11 +13,11 @@ public class Tour {
     private Long id;
 
     @Column(unique = true)
-    @Pattern(regexp = "^[A-Z]{2}\\\\d{3}$", message = "hay viet dung dịnh dạng XX(A-Z)-xxx(0-9)!")
+    @NotEmpty(message="Nhập vào mã!")
     private String code;
     @NotEmpty(message = "Tên không được để trống!")
     private String name;
-    @Min(value = 1000000 , message = "Giá thấp nhất phải trên 1000000")
+    @Min(value = 1000000 , message = "Giá thấp nhất là 1000000")
     private double price;
     @ManyToOne
     @JoinColumn(name = "type_id")

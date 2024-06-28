@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/type")
+@RequestMapping("/types")
 
 public class TypeController {
     private final ITypeService typeService;

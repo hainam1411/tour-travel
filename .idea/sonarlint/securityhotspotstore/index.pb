@@ -1,10 +1,6 @@
 
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-f
-6src/main/java/org/example/tourtravel/HelloServlet.java,5\b\5ba5361ac2e838e58335d3c643ee82e8d5f48402
-I
-src/main/webapp/index.jsp,8\e\8e6d3b70c9f5b02570779b0441540d45eceb0ded
 K
 src/main/webapp/layout.html,3\3\332623fe8da0b1479517450b40b99459b69f60d1
 j
@@ -35,8 +31,6 @@ X
 (src/main/webapp/WEB-INF/type/delete.html,0\c\0cf1b1dfbe382d1fec9f7a80e2338fb417d0b3c7
 W
 'src/main/webapp/WEB-INF/type/index.html,2\4\24f9a9a9f6f48b2372a8a620c275d9f2cf9e2544
-X
-(src/main/webapp/WEB-INF/type/search.html,c\9\c93a86e1fd4f553560b16d2459116c6c3f2f11bf
 X
 (src/main/webapp/WEB-INF/type/update.html,1\5\15f82bf6b085f8fc6c1694ae06ab531bcbc833d5
 ?
