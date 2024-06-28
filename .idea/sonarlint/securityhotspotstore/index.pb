@@ -51,3 +51,7 @@ r
 Bsrc/main/java/org/example/tourtravel/service/Impl/TourService.java,8\1\81ab75bebec5c9f0a52f8d543d06a519587678ac
 t
 Dsrc/main/java/org/example/tourtravel/repository/ITypeRepository.java,e\b\ebebbde7ec0b4654eb360496ac8a55ff973acaa4
+w
+Gsrc/main/java/org/example/tourtravel/controller/TourRestController.java,a\f\afa6d3fda6ad78fd569178ca5c4cb976862ca735
+w
+Gsrc/main/java/org/example/tourtravel/controller/TypeRestController.java,0\d\0da2b9dc21da750552050f6fc13d4368b3772b74
