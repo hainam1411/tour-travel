@@ -45,4 +45,25 @@ public class TourRestController {
         tourService.save(tour);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Tour> updateTour(@PathVariable Long id, @RequestBody Tour tour){
+        Optional<Tour> tourOptional = tourService.findById(id);
+        if (tourOptional.isPresent()){
+            tour.setId(tourOptional.get().getId());
+            tourService.save(tour);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Tour> deleteTour(@PathVariable Long id){
+        Optional<Tour> tourOptional = tourService.findById(id);
+        if (tourOptional.isPresent()){
+            tourService.delete(tourOptional.get().getId());
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
