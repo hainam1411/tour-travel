@@ -2,9 +2,9 @@
 ¬
 java:S14886"dImmediately return this expression instead of assigning it to the temporary variable "modelAndView".(–ÄÕâüÿÿÿÿ8± Ø¯„2J$3dffb200-8e9d-4725-800e-925174d5fb6c
 
-java:S3655@"7Call "Optional#isPresent()" before accessing the value.(„áŒ³úÿÿÿÿ8µ¨ƒÀ„2J$65a926ff-b659-4fcd-95d6-9231892f5f6b
-
 java:S3655#"7Call "Optional#isPresent()" before accessing the value.(ÈžÞ¾ÿÿÿÿÿ8µ¨ƒÀ„2J$b3e8da94-df0f-4414-92b7-865d54319f18
+
+java:S3655@"7Call "Optional#isPresent()" before accessing the value.(„áŒ³úÿÿÿÿ8µ¨ƒÀ„2J$65a926ff-b659-4fcd-95d6-9231892f5f6b
 ˜
 java:S1192*"PDefine a constant instead of duplicating this literal "redirect:/types" 3 times.(Øèã›øÿÿÿÿ8¸ Ø¯„2J$cdd265de-ab7e-4a58-b61b-652d583803ca
 q

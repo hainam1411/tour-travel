@@ -39,4 +39,10 @@ public class TourRestController {
         }
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @PostMapping
+    public ResponseEntity<Tour> saveTour(@PathVariable Long id, @RequestBody Tour tour ){
+        tourService.save(tour);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 }
