@@ -25,7 +25,7 @@ public class TourRestController {
     public ResponseEntity<Iterable<Tour>> showTour(){
         List<Tour> tour = (List<Tour>) tourService.findAll();
         if (tour.isEmpty()) {
-            return new  ResponseEntity<>(HttpStatus.OK);
+            return new  ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(tour, HttpStatus.OK);
     }
@@ -66,4 +66,10 @@ public class TourRestController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+//    @GetMapping("/p")
+//    public ResponseEntity<Iterable<ICountTour>> getNumber(){
+//        Iterable<ICountTour> tours = typeService.getCountTour();
+//        return new ResponseEntity<>(tours, HttpStatus.OK);
+//    }
 }
