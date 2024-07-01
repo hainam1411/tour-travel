@@ -19,7 +19,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
 
-            <a href="create.html" class="btn btn-secondary" type="submit">Quay lại</a>
+            <a href="index.html" class="btn btn-secondary" type="submit">Quay lại</a>
 
             <div>
                 <label for="code">Mã tour</label>
@@ -37,13 +37,13 @@
             <div>
                 <label for="type">Loại tour</label>
                 <select class="form-select" aria-label="Default select example"id="type">
-                    <option value="">Trong nước</option>
-                    <option value="">Nước ngoài</option>
-                    <option value="">Du lịch sinh thái</option>
-                    <option value="">Camping</option>
+                    <option value="1">Trong nước</option>
+                    <option value="2">Nước ngoài</option>
+                    <option value="3">Du lịch sinh thái</option>
+                    <option value="4">Camping</option>
                 </select>
             </div>
-            <button class="btn btn-success" onclick="createStudent(event)">Thêm</button>
+            <button type="button" class="btn btn-success" onclick="createTour()">Thêm</button>
         </div>
         <div class="col-md-3"></div>
     </form>

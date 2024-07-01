@@ -11,12 +11,13 @@
 
 </head>
 <body>
+<div id="editTour"></div>
 <div class="container">
     <div id="overview">
         <h1>Quản lý tour du lịch</h1>
     </div>
     <div>
-        <a href="create.html" class="btn btn-success" type="submit">Thêm tour mới</a>
+        <a href="create.html" class="btn btn-success" type="submit" >Thêm tour mới</a>
         <table border="1px solid red" class="table">
             <thead>
             <tr>
@@ -36,9 +37,8 @@
                 <td>Hà Nội</td>
                 <td>1500000</td>
                 <td>Trong nước</td>
-                <td><button class="btn btn-primary">Edit</button></td>
-                <td><button class="btn btn-info">View</button></td>
-                <td><button class="btn btn-danger">delete</button></td>
+                <td><a  href="update.html" class="btn btn-primary" type="submit" onclick="editTour(id)"> Sửa</a></td>
+                <td><button class="btn btn-danger">xóa</button></td>
             </tr>
             </tbody>
         </table>
